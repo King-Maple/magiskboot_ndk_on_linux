@@ -27,7 +27,7 @@ jobs:
 
       - name: Clone repo
         run: |
-          git clone --recurse-submodules https://github.com/xiaoxindada/magiskboot_ndk_on_linux.git magiskboot
+          git clone --recurse-submodules https://github.com/King-Maple/magiskboot_ndk_on_linux.git magiskboot
 
       - name: Strart build
         run: |
