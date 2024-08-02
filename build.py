@@ -125,7 +125,7 @@ triples = [
     "x86_64-linux-android",
 ]
 default_targets = {"magisk", "magiskinit", "magiskboot", "magiskpolicy"}
-support_targets = default_targets | {"resetprop"}
+support_targets = default_targets
 rust_targets = {"magisk", "magiskinit", "magiskboot", "magiskpolicy"}
 
 ndk_root = op.join(LOCALDIR, "ndk")
