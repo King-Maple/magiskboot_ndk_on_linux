@@ -312,8 +312,9 @@ impl Cpio {
                 inode, 0o755, 0, 0, 1, 0, 0, 0, 0, 0, 0, 11, 0
             ).as_bytes()
         )?;
-        pos += file.write("TRAILER!!!\0".as_bytes())?;
-        file.write_zeros(align_4(pos) - pos)?;
+        pos += file.write("TRAILER!!!".as_bytes())?;
+        
+        file.write_zeros(512 - (pos % 512))?;
         Ok(())
     }
 
