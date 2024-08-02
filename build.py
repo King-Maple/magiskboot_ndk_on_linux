@@ -124,9 +124,9 @@ triples = [
     "aarch64-linux-android",
     "x86_64-linux-android",
 ]
-default_targets = ["magiskboot", "busybox"]
-support_targets = default_targets
-rust_targets = ["magiskboot"]
+default_targets = {"magisk", "magiskinit", "magiskboot", "magiskpolicy"}
+support_targets = default_targets | {"resetprop"}
+rust_targets = {"magisk", "magiskinit", "magiskboot", "magiskpolicy"}
 
 ndk_root = op.join(LOCALDIR, "ndk")
 ndk_build = op.join(ndk_root, "ndk-build")
